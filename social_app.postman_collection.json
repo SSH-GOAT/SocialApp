@@ -1,0 +1,607 @@
+{
+	"info": {
+		"_postman_id": "874ae346-7d22-4d30-a324-299af68d80a5",
+		"name": "social_app",
+		"description": "StartFragment\n\nHi there,\n\nPlease note that this collection currently lacks an automated flow. Manual intervention is required:\n\n1. **Login Request**: Start by sending the 'login' request.\n    \n2. **Copy the Token**: Once you receive the generated token, you will need to manually copy and paste it into the following requests.\n    \n\nI apologize for the inconvenience and appreciate your understanding. Unfortunately, I didn’t have time to set up a full flow for this collection.\n\n### URL Patterns\n\nUsing the URL configuration defined in `social_network.urls`, Django tried the following URL patterns, in this order:\n\n- `friends/` \\[name='friends-list'\\]\n    \n- `profile//` \\[name='user-profile'\\]\n    \n- `^user/$` \\[name='user-list'\\]\n    \n- `^user\\.(?P[a-z0-9]+)/?$` \\[name='user-list'\\]\n    \n- `^follow-request/$` \\[name='friendrequest-list'\\]\n    \n- `^follow-request\\.(?P[a-z0-9]+)/?$` \\[name='friendrequest-list'\\]\n    \n- `^follow-request/(?P[^/.]+)/$` \\[name='friendrequest-detail'\\]\n    \n- `^follow-request/(?P[^/.]+)\\.(?P[a-z0-9]+)/?$` \\[name='friendrequest-detail'\\]\n    \n- `^block/$` \\[name='blocked-list'\\]\n    \n- `^block\\.(?P[a-z0-9]+)/?$` \\[name='blocked-list'\\]\n    \n- `^block/(?P[^/.]+)/$` \\[name='blocked-detail'\\]\n    \n- `^block/(?P[^/.]+)\\.(?P[a-z0-9]+)/?$` \\[name='blocked-detail'\\]\n    \n- `[name='api-root']`\n    \n- \\[name='api-root'\\]\n    \n- `login/`\n    \n- `signup/`\n    \n\nThank you for your patience!\n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13516479"
+	},
+	"item": [
+		{
+			"name": "signup user1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user1@email.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "signup user2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user2@email.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "user2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user2",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "signup user3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user3@email.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "user3",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "signup user4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user4@email.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "user4",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "signup user5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user5@email.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "user5",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user5",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "login user1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user1@email.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "user1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "login user3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "user1@email.com",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user3@email.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "user1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "user3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "login user5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "user1@email.com",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user3@email.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "user1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "user3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "user list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 8a88cf86743952376ac439e4463463136c539613",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user1@email.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "user1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://localhost:8001/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "follow request user3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "user1@email.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 8a88cf86743952376ac439e4463463136c539613",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestTo",
+							"value": "user3@email.com",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sent",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/follow-request/"
+			},
+			"response": []
+		},
+		{
+			"name": "follow request user4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "user1@email.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 8a88cf86743952376ac439e4463463136c539613",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestTo",
+							"value": "user4@email.com",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sent",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/follow-request/"
+			},
+			"response": []
+		},
+		{
+			"name": "follow request user5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "user1@email.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 8a88cf86743952376ac439e4463463136c539613",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestTo",
+							"value": "user5@email.com",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sent",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/follow-request/"
+			},
+			"response": []
+		},
+		{
+			"name": "follow request user2 - ratelimit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "user1@email.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 8a88cf86743952376ac439e4463463136c539613",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestTo",
+							"value": "user2@email.com",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sent",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/follow-request/"
+			},
+			"response": []
+		},
+		{
+			"name": "list follow request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "user1@email.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 8a88cf86743952376ac439e4463463136c539613",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestTo",
+							"value": "user2@email.com",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sent",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/follow-request/"
+			},
+			"response": []
+		},
+		{
+			"name": "reject follow request",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "username",
+						"value": "user1@email.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token b252dc96b7465412ab8627b6ab2f4be7b9928d93",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestBy",
+							"value": "user2@email.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "rejected",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/follow-request/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "follow request user3 within 24 hours",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "user1@email.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 8a88cf86743952376ac439e4463463136c539613",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestTo",
+							"value": "user5@email.com",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sent",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8001/follow-request/"
+			},
+			"response": []
+		}
+	]
+}
